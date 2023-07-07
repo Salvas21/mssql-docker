@@ -1,6 +1,6 @@
 #!/bin/bash
 
-initial_output=$(lsof -i tcp:5004)
+initial_output=$(lsof -i tcp:$1)
 
 # Read output line by line
 echo "$initial_output" | while IFS= read -r line; do
